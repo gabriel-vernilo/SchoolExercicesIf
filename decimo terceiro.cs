@@ -2,18 +2,21 @@ using System;
 
 class MainClass {
   public static void Main (string[] args) {
-    string input_senha;
-    const string senha = "1234";
-  Console.WriteLine("digite a senha: ");
-  input_senha = Console.ReadLine();
+    int qtd_atual,qtd_min,qtd_max,qtd_med;
 
-  if (input_senha == senha){
-    Console.WriteLine("Acesso Permitido");
-  }
-  else{
-    Console.WriteLine("Acesso negado");
-  }
-
+    Console.WriteLine("diigte o valor atual em estoque");
+    qtd_atual = int.Parse(Console.ReadLine());
+    Console.WriteLine("diigte o valor minima para o estoque");
+    qtd_min = int.Parse(Console.ReadLine());
+    Console.WriteLine("diigte o valor maxima para o estoque");
+    qtd_max = int.Parse(Console.ReadLine());
+    qtd_med = (qtd_min + qtd_max)/2;
+    if(qtd_atual >qtd_med){
+      Console.WriteLine("Não efetuar Compra");
+    }
+    else{
+      Console.WriteLine("efetuar compra");
+    }
   Console.ReadKey(true);
   }
 }
